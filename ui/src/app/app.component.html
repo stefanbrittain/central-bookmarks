@@ -2,19 +2,20 @@
 
 <banner-component (systemMessage)="processAction($event)"></banner-component>
 <about-dialog *ngIf="showAbout" (systemMessage)="processAction($event)"></about-dialog>
-<div [ngClass]="(showAbout==true)?'app blur':'app'">
+<div id="MainArea">
+  <div [ngClass]="(showAbout==true)?'app blur':'app'">
 
-  <div class="message" *ngIf="query" >
-    <h2><span class="highlight">"{{query}}"</span> is not the keyword you are looking for!</h2>
+    <div class="message" *ngIf="query" >
+      <h2><span class="highlight">"{{query}}"</span> is not the keyword you are looking for!</h2>
+    </div>
+    <div>
+      <add-control (systemMessage)="displaySystemNotification($event)" initValue="{{query}}"></add-control>
+    </div>
+    <hr>
+    <div>
+      <search-box (systemMessage)="displaySystemNotification($event)" placeholder="myKeyword"></search-box>
+    </div>
   </div>
-  <div>
-    <add-control (systemMessage)="displaySystemNotification($event)" initValue="{{query}}"></add-control>
-  </div>
-  <hr>
-  <div>
-    <search-box (systemMessage)="displaySystemNotification($event)" placeholder="myKeyword"></search-box>
-  </div>
-
 </div>
 
 <toaster-component></toaster-component>

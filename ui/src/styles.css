@@ -298,7 +298,16 @@ li a:hover:not(.active) {
 }
 
 body {
+  background-image: url('/assets/grid.png');
+  background-repeat: repeat;
+  animation: animatedBackground 2s ease-out 1s;
+}
 
+
+@keyframes animatedBackground {
+  0% { background-color: white; }
+  50% { background-color: #C6C6C6; }
+	100% { background-color: white; }
 }
 
 .popup {
