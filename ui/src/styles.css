@@ -1,0 +1,322 @@
+// http://paletton.com/#uid=44H0u0kllllaFw0g0qFqFg0w0aF
+
+
+
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150%;
+}
+
+p, body, .input-box, .button {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 125%;
+
+}
+
+hr {
+	height: 1px;
+  border-top: 1px solid #8c8b8b;
+  text-align: center;
+}
+
+a {
+  color: #582A72
+}
+
+hr:after {
+	content: '\002665';
+	display: inline-block;
+	position: relative;
+	top: -15px;
+
+	background: #white;
+	color: #582A72;
+	font-size: 24px;
+}
+
+.message {
+
+
+}
+
+.edit-box {
+
+}
+
+.box-icon {
+}
+
+.box-text {
+  padding: 10px 10px;
+}
+
+.search-box {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-gap: 10px;
+  margin-top: 10px;
+  padding: 20px 20px;
+}
+
+.add-box {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-gap: 10px;
+  margin-top: 50px;
+  padding: 20px 20px;
+}
+
+.search-results-box {
+  padding: 20px 20px;
+}
+
+.highlight-box:hover {
+  background-color: #D4EE9F;
+  color: black;
+  border: 1px solid black;
+  transition-duration: 0.5s;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.list-item-box {
+  padding: 20px 20px;
+  font-size: 18px;
+  transition-duration: 0.5s;
+  border: 1px solid grey;
+}
+
+.list-item-controls {
+  padding: 10px 10px;
+}
+
+.list-item-box:hover {
+  padding: 30px 30px;
+  font-size: 130%;
+}
+
+.list-item-title {
+  padding: 10px 10px;
+  left:0px;
+  top:0px;
+
+}
+
+.highlight {
+  background-color: yellow;
+  font-style: italic;
+}
+
+.banner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 0px;
+  font-size: 14px;
+  background-color: #582A72;
+}
+
+.input-box, .url-input-box, .edit-url-input-box {
+  font-size: 18px;
+}
+
+.input-box {
+  width: 20%;
+}
+
+.edit-url-input-box {
+  width: 50%;
+}
+
+.url-input-box {
+  width: 45%;
+}
+
+.button {
+  background-color: grey;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  width: 20%;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+.button:hover {
+    background-color: #7A9F35;
+    color: white;
+}
+
+.button-small {
+  background-color: grey;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+.button-small:hover {
+    background-color: #7A9F35;
+    color: white;
+}
+
+
+.button:disabled,
+.button[disabled],
+.button-small:disabled,
+.button-small[disabled]{
+  border: 1px solid #cccccc;
+  background-color: #cccccc;
+  color: white;
+}
+
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+
+.button-small span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-small span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-small:hover span {
+  padding-right: 25px;
+}
+
+.button-small:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button-small:active {
+  transform: scale(0.9);
+}
+
+.toaster-info, .toaster-error {
+    min-width: 250px;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 70%;
+    bottom: 40px;
+}
+
+.toaster-info {
+    background-color: #7A9F35;
+}
+
+.toaster-error {
+    background-color: #AB3C39;
+}
+
+.app {
+  margin: auto;
+  width: 75%;
+  padding: 10px;
+
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #7A9F35;
+}
+
+body {
+
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  z-index: 999;
+  position: fixed;
+  top: 0%;
+  left: 10%;
+  width: 80%;
+  height: 500px;
+  transition: all 5s ease-in-out;
+}
+
+.blur {
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}

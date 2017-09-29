@@ -1,0 +1,10 @@
+
+<div class="add-box highlight-box">
+  <div class="box-icon"><img src="assets/Add.png" alt="Add"/></div>
+  <div class="box-text"><br>
+    <input placeholder="myKeyword" required (input)="null" class="input-box" value="{{value}}" #keyword>
+    <img src="assets/link.png"/>
+    <input placeholder="http://www.example.com/example" required (input)="null" class="url-input-box" #href>
+    <button class="button" [disabled]="!isValid(keyword.value,href.value)" (click)="add(keyword.value,href.value)" ><span>Add </span></button>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="search-box highlight-box">
+  <div class="box-icon"><img src="assets/search.png" alt="Search"/></div>
+  <div class="box-text"><br>
+    Search for existing keywords: <input class="input-box" placeholder="{{text}}" #input>
+    <button class="button" (click)="search(input.value)"><span>Search </span></button>
+  </div>
+</div>
+
+<br>
+<div *ngIf="hasSearched()">(Matched on <countup-component  initValue="{{appMaps.length}}"></countup-component> entries)</div>
+
+<div class="search-results-box">
+        <p *ngFor="let appMap of appMaps;let i = index"
+            [class.selected]="appMap === selectedAppMap">
+            <listitem-control (systemMessage)="displayNotification($event)" rowNum="{{i+1}}" keyword="{{appMap.keyword}}" url="{{appMap.value.url}}"></listitem-control>
+        </p>
+</div>

@@ -1,0 +1,25 @@
+<div *ngIf="deleted" class="list-item-box">
+  <div class="list-item-title">
+    <a href='http://192.168.0.105:8081/redirect?q=go%20{{keyword}}' title="{{url}}">(Deleted) {{rowNum}}. {{keyword}}</a>
+    <button class="button-small" (click)="onUndoDelete()"><span>Undo </span></button>
+  </div>
+</div>
+
+<div *ngIf="!deleted" class="list-item-box highlight-box">
+  <div class="box-text">
+    <div class="list-item-title">
+      <a href='http://192.168.0.105:8081/redirect?q=go%20{{keyword}}' title="{{url}}">{{rowNum}}. {{keyword}}</a>
+
+      <button class="button-small" [disabled]="thinkAboutEdit || thinkAboutDelete" (click)="onThinkAboutEdit(true)"><span>Edit </span></button>
+      <button class="button-small" [disabled]="thinkAboutEdit || thinkAboutDelete" (click)="onThinkAboutDelete(true)"><span>Delete </span></button>
+      <button *ngIf="thinkAboutDelete" class="button-small" (click)="onThinkAboutDelete(true)"><span>Are you sure? </span></button>
+      <button *ngIf="thinkAboutDelete" class="button-small" (click)="onThinkAboutDelete(false)"><span>Cancel </span></button>
+    </div>
+
+    <div *ngIf="thinkAboutEdit">
+         <input class="edit-url-input-box" value="{{url}}" #newURL/>
+         <button class="button-small" (click)="onUpdate(newURL.value)"><span>Update </span></button>
+         <button class="button-small" (click)="onThinkAboutEdit(false)"><span>Cancel </span></button>
+    </div>
+  </div>
+</div>
